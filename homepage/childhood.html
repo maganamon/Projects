@@ -1,0 +1,91 @@
+<html lang="en">
+    <head>
+        <title>My Webpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+        </style>
+    </head>
+    <body>
+  <!--Side Bar-->
+        <nav class="w3-sidebar w3-yellow w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+            <div class="w3-container">
+              <h3 class="w3-padding-64 fntsz2"><b>This is<br>Me.</b></h3>
+            </div>
+            <div class="w3-bar-block">
+              <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Home</a>
+              <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">About Me</a>
+              <a href="hobbies.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Hobbies</a>
+              <a href="childhood.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Childhood</a>
+              <a href="influences.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Influences</a>
+              </div>
+          </nav>
+            </body>
+            <!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>This is Me.</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+          <!--Main Page-->
+          <div class="w3-main" style="margin-left:340px;margin-right:40px">
+            <!--Header-->
+            <div class="centermain w3-container" style="margin-top:70px" id="showcase">
+                <h1 class="w3-jumbo">
+                    Born and Raised
+                </h1>
+            </div>
+            <!--start of txt-->
+        <div class="w3-container" id="designers" style="margin-top:30px; margin-right: 40px">
+            <p>
+                <u style ="color: #de004e">WARNING!!!</u><br>
+                This is the last page I worked on. I put all my effort into the other pages. <br>
+                What you are about to read was written by <b style="color: #de004e">AI</b>, so I can turn this in already lmaooo.
+            </p>
+            <p><br>
+                I was born in <b style="color: #de004e">Bakersfield, California</b>, and spent my early childhood in Taft. <br>
+                Born from 2 <b style="color: #de004e">Mexican</b> parents, so I'm 100% chicano *sunglasses emoji* <br>
+                Lived in Taft (super super tiny city) all my life until the age of 16. When I was 16, I moved back to Bakersfield. <br>
+                During my childhood, I enjoyed playing video games and drawing. <br>
+                I also played <b style="color: #de004e">soccer</b>(really fitting the Mexican stereotype) from a young age, but in
+                my junior year of high school, I decided to focus on tennis. <br>
+                As the youngest of three children, I had <b style="color: #de004e">two older brothers</b> who were also a big part of my upbringing.
+                Overall, I had a normal childhood, filled with plenty of fun and activities.
+        </p>
+        <img src="/images4/mememe.jpeg" style="width:60%; margin-top:20px" onclick="onClick(this)" alt="Meme of an angry wolf head with the words: Give Minimal Effot. 100& Quality.">
+      </div>
+      </div>
+      <script>
+        // Script to open and close sidebar
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        </script>
+    </body>
+</html>

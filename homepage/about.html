@@ -1,0 +1,113 @@
+<html lang="en">
+    <head>
+        <title>My Webpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+        </style>
+    </head>
+    <!--Side Bar/ Menu-->
+    <body>
+        <nav class="w3-sidebar w3-yellow w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+            <div class="w3-container">
+              <h3 class="w3-padding-64 fntsz2"><b>This is<br>Me.</b></h3>
+            </div>
+            <div class="w3-bar-block">
+              <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Home</a>
+              <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">About Me</a>
+              <a href="hobbies.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Hobbies</a>
+              <a href="childhood.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Childhood</a>
+              <a href="influences.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Influences</a>
+              </div>
+          </nav>
+            </body>
+             <!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>This is Me.</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+          <!--Main Page-->
+          <div class="w3-main" style="margin-left:340px;margin-right:40px">
+            <!--Header-->
+            <div class="centermain w3-container" style="margin-top:70px" id="showcase">
+                <h1 class="w3-jumbo">
+                    Born and Raised
+                </h1>
+            </div>
+            <!--start of txt-->
+        <div class="w3-container fntsz3" id="designers" style="margin-top:30px">
+            <p>
+                I was born in <b style="color: #89e3f6">Bakersfield CA.</b><br>
+                And raised in a small town called <b style ="color: #89e3f6">Taft.</b>
+            </p>
+        </div>
+        <div class="w3-container" id="designers" style="margin-top:10px; margin-right:60px">
+            <p>
+                Hi, my name is Rudy and some of my passions are <u style ="color: #de004e">tennis</u>, <u style ="color: #de004e">cybersecurity</u>, and <u style ="color: #de004e">manga</u>. I was pretty good at tennis and won a few awards no one cares about.
+            In my free time, I love to draw manga (although I'm not good... Im getting better. I think..) and explore the latest trends in cybersecurity. I am determined to become a successful pen-tester one day,
+             and I am always looking for new opportunities to learn and grow in this field. Thank you for taking the time to get to know me.
+        </p>
+        <!-- Photo grid (Pen and Tennis) -->
+        <div class="w3-row-padding">
+            <div class="w3-third">
+              <img src="/images4/pent.jpg" style="width:155%" onclick="onClick(this)" alt="Picture showing the 5 different stages of Pen Testing.">
+            </div>
+
+            <div class="w3-third">
+              <img src="/images4/tennisme.jpeg" style="width:79%; margin-left:180px" onclick="onClick(this)" alt="Rudy playing tennis. Getting ready to hit the ball back.">
+            </div>
+          </div>
+        <p>
+            I used to attend <u style ="color: #de004e">UC Santa Barbara</u> and was majoring in <u style ="color: #de004e">Biology</u>, but I eventually dropped out. One of the biggest challenges I faced was the rigorous coursework in Chemistry.
+            Let's just say that I struggled to see the "fun" in all those equations and experiments. But in the end,
+            I realized that pursuing a career in Biology wasn't the right fit for me and decided to focus on other interests.
+        </p>
+        <p>
+            Just a little fun facts about me are that: I enjoy listening to the <u style ="color: #de004e">Dark Net Diaries</u> podcast, a podcast that covers events in the world of cyberspace and the internet.
+            I also have a love for <u style ="color: #de004e">Italian food</u>, and I enjoy cooking in my free time. However, I must admit that I am not the best chef
+            and would say that my cooking skills are "pasta" the point of being good. Despite my self-deprecating humor, I thank you for reaching this
+            far to read about some dude's life. :,)
+        </p>
+        <div class="w3-third">
+            <img src="/images4/ucseal.png" style="width:80%" onclick="onClick(this)" alt="UC Santa Barbara seal logo.">
+          </div>
+          <div class="w3-third">
+            <img src="/images4/darknd.jpg" style="width:80%; margin-left:130px" onclick="onClick(this)" alt="Dark net diaries logo.">
+          </div>
+      </div>
+      </div>
+      <script>
+        // Script to open and close sidebar
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        </script>
+    </body>
+</html>

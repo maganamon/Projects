@@ -1,0 +1,55 @@
+.w3-yellow,.w3-hover-yellow:hover{
+    color:#fff!important;background-color:#F5F751!important}
+
+.w3-hover-white:hover{
+    color:#000000 background-color:#000000
+}
+
+.fntsz{
+    font-size: 22px
+}
+
+.fntsz2{
+    font-size: 40px
+}
+
+.w3-text-bluu{
+    color:#89e3f6
+}
+
+
+.w3-bar-item{
+    color:#000000}
+
+.w3-padding-64{
+    color:#000000}
+
+.centermain{
+    padding-left: 200px
+}
+
+.w3-text-red2{
+    color:#DA2F73
+}
+
+.fntsz3{
+    font-size: 18px
+}
+
+.imagetxt {
+    margin-left:368px;
+    margin-right:40px;
+    width:75%;
+    float:left;
+  }
+.txthobhead {
+    margin-right: 80px; font-size: 28px
+}
+
+.txthobhead2 {
+    margin-right: 80px; font-size: 28px; margin-top: 15px
+}
+
+.txthob {
+    margin-right: 80px; font-size: 16px
+}

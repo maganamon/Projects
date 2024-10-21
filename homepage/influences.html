@@ -1,0 +1,168 @@
+<html lang="en">
+    <head>
+        <title>My Webpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+        </style>
+    </head>
+    <!--Sidebar/ Menu-->
+    <body>
+        <nav class="w3-sidebar w3-yellow w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+            <div class="w3-container">
+              <h3 class="w3-padding-64 fntsz2"><b>This is<br>Me.</b></h3>
+            </div>
+            <div class="w3-bar-block">
+              <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Home</a>
+              <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">About Me</a>
+              <a href="hobbies.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Hobbies</a>
+              <a href="childhood.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Childhood</a>
+              <a href="influences.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Influences</a>
+              </div>
+          </nav>
+            </body>
+            <!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>This is Me.</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+          <!--Main Page-->
+          <div class="w3-main" style="margin-left:340px;margin-right:40px">
+            <!--Inluence/ BigSean Header-->
+            <div class="w3-container" style="margin-top:80px" id="showcase">
+                <h1 class="w3-jumbo"><b>Influences</b></h1>
+                <h1 class="w3-xxxlarge w3-text-red"><b>Big Sean.</b></h1>
+                <hr style="width:100px;border:5px solid red" class="w3-round">
+              </div>
+
+              <!-- Photo grid (BigS) -->
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="/images4/bigseanpic.jpg" style="width:150%" onclick="onClick(this)" alt="Big Sean Photo">
+                </div>
+
+                <div class="w3-third">
+                  <img src="/images4/dark_sky.jpg" style="width:100%; margin-left:200px" onclick="onClick(this)" alt="Dark Sky Paradise album cover">
+                </div>
+              </div>
+              <!--Text for Big Sean-->
+              <div class="w3-container" id="designers" style="margin-top:10px; margin-right:60px">
+                <p>Big Sean is a Rap artist from Detroit.</p>
+                <p>Big Sean's music, particularly his album "Dark Sky Paradise," has had a profound impact on my life.
+                  I remeber one time when I took a trip to Mexico, and my phone service didn't support service out of the U.S., but
+                  luckily I had this album downloaded, so I was kinda forced to listen to it on repeat lol. I appreciate his ability to tell powerful
+                  stories through his songs; his music has provided me with a sense of comfort and inspiration during difficult times,
+                  and has helped me to overcome personal challenges.
+                  My cousin and I have bonded over Big Sean's music in many ways. We both enjoy listening to his albums together, and often discuss the lyrics and meanings of his songs.
+                  We both enjoy listening to his music and often discuss our favorite songs from his albums.
+                </p>
+              </div>
+              <!-- Modal for full size images on click-->
+              <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+                <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                  <img id="img01" class="w3-image">
+                  <p id="caption"></p>
+                </div>
+              </div>
+
+              <!-- Cyberpunk -->
+              <div class="w3-container" id="services" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Cyberpunk.</b></h1>
+                <hr style="width:50px;border:5px solid red" class="w3-round">
+              </div>
+
+                 <!-- Photo grid (CyPnk) -->
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="/images4/cyberp.jpeg" style="width:175%" onclick="onClick(this)" alt="Cyberpunk 2077 front game art">
+                </div>
+
+                <div class="w3-third">
+                  <img src="/images4/cpunk3.jpeg" style="width:74%; margin-left:280px" onclick="onClick(this)" alt="Cyberpunk Netflix poster art">
+                </div>
+              </div>
+              <!--Text for Cyberpunk-->
+              <div class="w3-container" id="designers" style="margin-top:10px; margin-right:60px">
+                <p>Cyberpunk. A subgenre of science fiction. About futuristic societies where advanced technology and
+                  the internet have become ingrained in all aspects of daily life.</p>
+                <p>The main thing that draws me into cyberpunk is the blurring of the line between the physical and digital worlds. Which is
+                  pretty cool. In the game and TV show, we see characters with augmentations
+                  and implants that enhance their physical abilities, although they start to go crazy or go into "Cyberpsychosis"
+                  if they abuse the enhancement or it'll just happen long-term, and allow them to access the vast network of information that exists
+                  in the cyberworld. I like how the world of cyberpunk is often depicted as being bleak and dystopian, but it also shows us a glimpse
+                  of the incredible potential of technology. It raises thought-provoking
+                  questions about the role of technology in our lives, and the possible consequences of its continued advancement. Overall, the
+                  wonder of cyberpunk lies in its ability to transport us to a future that is both familiar and alien, and to make us think
+                  about the implications of our own relationship with technology. It's pretty cool.
+                </p>
+              </div>
+
+              <!-- Hunter x Hunter Header -->
+              <div class="w3-container" id="services" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Hunter x Hunter.</b></h1>
+                <hr style="width:50px;border:5px solid red" class="w3-round">
+              </div>
+
+                 <!-- Photo grid (Hunter x Hunter) -->
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="/images4/hxhpro.png" style="width:145%" onclick="onClick(this)" alt="Colored manga headshots of Gon, Killua, Kurapika, and Leorio.">
+                </div>
+
+                <div class="w3-third">
+                  <img src="/images4/hxhpt.jpg" style="width:76%; margin-left:150px" onclick="onClick(this)" alt="Fan art of all the Phantom Troupe. Dead and Alive. Before and After.">
+                </div>
+              </div>
+              <!--Text for H x H-->
+              <div class="w3-container" id="designers" style="margin-top:10px; margin-right:60px">
+                <p>Hunter x Hunter is a popular manga series created by Yoshihiro Togashi.</p>
+                <p>The manga is known for its compelling plot, well-developed characters, and stunning artwork, and has
+                  gained a massive following worldwide.Hunter x Hunter features a unique and complex system of combat called "Nen,"
+                  which allows practitioners to manipulate their own life energy for various purposes such as offense, defense, and
+                  support. The Phantom Troupe, a group of thieves known for their ruthlessness and extraordinary Nen abilities, is a
+                  major antagonist in the series. Hisoka, a member of the Troupe and one of the main characters, is a complex and
+                  enigmatic individual with a love of battle and a twisted moral code. Hisoka is a fan favorite due to his unpredictable
+                  actions and impressive Nen abilities. The creative writing of Togashi, the creator of Hunter x Hunter, is also a
+                  major draw of the series. Togashi is known for his intricate and multi-layered plotlines, as well as his deep and
+                  well-developed characters. The result is a manga that is consistently engaging and full of surprises. It is widely
+                  regarded as one of the best manga series of all time and is
+                  a must-read for any fan of the genre.
+                </p>
+              </div>
+      </div>
+      <script>
+        // Script to open and close sidebar
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        </script>
+    </body>
+</html>

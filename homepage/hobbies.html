@@ -1,0 +1,151 @@
+<html lang="en">
+    <head>
+        <title>My Webpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+        </style>
+    </head>
+    <!--Sidebar/ Menu-->
+    <body>
+        <nav class="w3-sidebar w3-yellow w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+            <div class="w3-container">
+              <h3 class="w3-padding-64 fntsz2"><b>This is<br>Me.</b></h3>
+            </div>
+            <div class="w3-bar-block">
+              <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Home</a>
+              <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">About Me</a>
+              <a href="hobbies.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Hobbies</a>
+              <a href="childhood.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Childhood</a>
+              <a href="influences.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white fntsz">Influences</a>
+              </div>
+          </nav>
+            </body>
+            <!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>This is Me.</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+          <!--Main Page-->
+          <div class="w3-main" style="margin-left:340px;margin-right:40px">
+            <!--Header-->
+            <div class="centermain w3-container" style="margin-top:70px" id="showcase">
+                <h1 class="w3-jumbo">
+                    Interests & Activities
+                </h1>
+            </div>
+            <!--Gym Red Header-->
+
+            <div class="w3-container" id="services" style="margin-top:20px">
+              <h1 class="w3-xxxlarge w3-text-red"><b>Gym.</b></h1>
+              <hr style="width:50px;border:5px solid red" class="w3-round">
+            </div>
+          </div>
+            <!--Gym Animal Pics-->
+            <div class="w3-main" style="margin-left:200px;margin-right:40px">
+            <div class="w3-third">
+              <img src="/images4/gymmeme.jpg" style="width:58%; float:right" onclick="onClick(this)" alt="Meme about Gym bro being bigger than Rudy.">
+            </div>
+            <div class="w3-third">
+              <img src="/images4/dogback.jpg" style="width:100%; margin-left:30px" onclick="onClick(this)" alt="The back of a dog with a jacked back.">
+            </div>
+            <div class="w3-third">
+              <img src="/images4/buffcat.jpeg" style="width:80%; margin-left:60px" onclick="onClick(this)" alt="An excessively jacked cat.">
+            </div>
+            </div>
+            <!--start of txt-->
+            <div class="w3-main" style="margin-left:340px; margin-right:40px; margin-top:300px">
+              <p>We go Gym.</p>
+              <p>There's nothing better getting home from the Gym like: Just hit the gym and had an epic workout. Nothing beats the feeling of pumping iron and feeling the burn
+                in your muscles. I'm on a mission to get jacked and there's no stopping me. Loaded up 225 on the bar and grinded out a few reps.
+                It's where I can let go of all my stress and just focus on becoming the biggest, baddest bro in the room. Nothing beats
+                the feeling of making gains and seeing your muscles grow. Always trying to get that Dog back. It's a bro thing, you wouldn't understand. Gotta hit the protein
+                shakes and get some gains, see ya at the gym! #gains #nevermisslegday #Dogback
+              </p>
+            </div>
+
+            <!--Main Page-->
+            <div class="w3-main" style="margin-left:340px;margin-right:40px">
+          <!--Manga Header-->
+            <div class="w3-container" id="services" style="margin-top:20px">
+              <h1 class="w3-xxxlarge w3-text-red"><b>Manga & Video Games.</b></h1>
+              <hr style="width:50px;border:5px solid red" class="w3-round">
+            </div>
+            </div>
+            <!--manga pics-->
+                <img class="imagetxt" src="/images4/berserkred.jpg" style="width:16%; float:left" onclick="onClick(this)" alt="Panel of Guts sitting from the Manga.">
+                <h6 class="txthobhead"> Berserk </h6>
+                <h6 class="txthob">  Berserk is a dark fantasy manga series that follows the story of Guts, a skilled mercenary warrior
+                  who is haunted by his past and the demons that plague him. The series explores themes of camaraderie, loss, and the
+                  constant struggle against the evil that lurks in the world. Despite facing overwhelming odds, Guts remains determined
+                  to fight for his beliefs and protect those he holds dear. The series is known for its graphic violence and intense
+                  character development. Its philosophical and psychological elements, and its exploration of the human condition and
+                  the nature of good and evil...
+                </h6>
+                <h6 class="txthob">
+                    Berserk has influenced the way I view the world and my own struggles, teaching me to persevere and be true to myself.
+                    It is a thought-provoking series that has left a lasting impact on me. Unfortunately, the writer of Berserk,
+                    Kentaro Miura, passed away before he was able to complete the story.
+                </h6>
+                <div style="clear:both;"></div>
+                <img class="imagetxt" src="/images4/sf64.jpeg" style="width:16%; margin-top:20px; float:left" onclick="onClick(this)" alt="Cover screenshot of the game StarFox 64.">
+                <h6 class="txthobhead2"> StarFox 64 </h6>
+                <h6 class="txthob"> StarFox 64 is a classic sci-fi action game released for the Nintendo 64 in 1997. It was revolutionary
+                  for its time due to it's plane flying 3rd person POV. You would fly in a space craft shooting other ships and enimies.
+                  It was pretty awesome. The game follows a team of anthropomorphic animals (my favorite being Fox the main character) as they defend the galaxy from the evil
+                  Andross and his army.
+                </h6>
+                <h6 class="txthob"> I remember constantly playing this game constantly as a child. I was fascinated by the diverse cast of characters
+                  and the different paths to beat the game, adding to its replay value. I enjoyed trying to beat the game using different
+                  routes and playing until the sun came up. To this day I place it in my top 5 games... OF ALL TIME!
+                </h6>
+                <h6 class="txthob"> The game had a lasting impact on me, as it sparked my love for science fiction and fast-paced action games.
+                  Overall, StarFox 64 is a timeless classic that holds a special place in my childhood memories.
+                </h6>
+                <div style="clear:both;"></div>
+                <img class="imagetxt" src="/images4/redpkm.jpg" style="width:16%; margin-top:20px; float:left" onclick="onClick(this)" alt="Cover of the game Pokemon Platinum.">
+                <h6 class="txthobhead2"> Pokemon Platinum </h6>
+                <h6 class="txthob"> I have been playing Pokemon throughout my entire life. It has been a constant presence in
+                  my gaming journey and has provided endless hours of entertainment and enjoyment.
+                </h6>
+                <h6 class="txthob"> Pokemon Platinum was my first Pokemon game. I remember getting my first handheld console, a
+                  Nintendo DS, and my parents taking my two older brothers and me to Best Buy to choose a handheld console. While
+                  my brothers chose the PSP, I stuck to my guns and chose the DS, which had a significant impact on my life. The DS
+                  introduced me to a whole new world of gaming and opened up a whole new avenue of entertainment for me. It was a
+                  defining moment in my life and one that I will always remember fondly.
+                </h6>
+                <script>
+                  // Script to open and close sidebar
+                  function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                  }
+
+                  function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                  }
+
+                  // Modal Image Gallery
+                  function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                  }
+                  </script>
+    </body>
+</html>
