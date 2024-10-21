@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-start">Name</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">TOTAL</th>
+        </tr>
+    </thead>
+    {% for row in portfolio %}
+    <tr class="cent2">
+        <td class="text-start">{{ row.stock_symbol }}</td>
+        <td class="text-start">{{ row.company }}</td>
+        <td class="text-end">{{ row.stock_quantity}}</td>
+        <td class="text-end">{{ prices[row.stock_symbol]|usd }}</td>
+        <td class="text-end">{{ (row.stock_quantity * prices[row.stock_symbol])|usd }}</td>
+    </tr>
+    {% endfor %}
+    </table >
+    <table border="0" width="auto" class="table">
+        <tr class="cent3">
+            <th class="text-end" width="0%">Cash</th>
+            <th class="text-end" width="230">{{ cash|usd }}</th>
+        </tr>
+        <tr class="cent3">
+            <th class="text-end" width="0%">Total</th>
+            <th class="text-end" width="230">{{ (truetotal)|usd }}</th>
+        </tr>
+        </table>
+{% endblock %}

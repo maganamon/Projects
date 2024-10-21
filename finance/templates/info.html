@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Info
+{% endblock %}
+
+{% block main %}
+<table class="cent">
+    <thead>
+        <tr>
+            <th class="pad">Name</th>
+            <th class="pad">Price</th>
+            <th>Symbol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="pad">{{ info.name }}</td>
+            <td class="pad">{{ info.price|usd }}</td>
+            <td>{{ info.symbol }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

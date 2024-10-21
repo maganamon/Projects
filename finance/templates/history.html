@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Stock</th>
+            <th class="text-start">Shares</th>
+            <th class="text-end">Total Price</th>
+            <th class="text-end">Type</th>
+            <th class="text-end">Time</th>
+        </tr>
+    </thead>
+    {% for row in history %}
+    <tr class="cent2">
+        <td class="text-start">{{ row.stock_symbol }}</td>
+        <td class="text-start">{{ row.stock_quantity }}</td>
+        <td class="text-end">{% if row.transaction_type == "buy" %}-{% endif %}{{ row.amount|usd}}</td>
+        <td class="text-end">{{ row.transaction_type }}</td>
+        <td class="text-end">{{ row.transaction_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
