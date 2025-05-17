@@ -1,4 +1,5 @@
 import os
+#import finnhub
 import datetime
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -10,6 +11,11 @@ from helpers import apology, login_required, lookup, usd
 
 # Configure application
 app = Flask(__name__)
+
+#Load API Automatically when ran
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Custom filter
 app.jinja_env.filters["usd"] = usd
@@ -90,6 +96,7 @@ def buy():
         print(request.form.get("shares"))
     # check how much money they have
     cash = float(db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"])
+    print("User's Cash =", cash)
     # if get render temp.
     if request.method == "GET":
         return render_template("buylook.html")

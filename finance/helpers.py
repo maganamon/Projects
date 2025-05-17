@@ -8,16 +8,26 @@ from functools import wraps
 
 def apology(message, code=400):
     """Render message as an apology to user."""
+
     def escape(s):
         """
         Escape special characters.
 
         https://github.com/jacebrowning/memegen#special-characters
         """
-        for old, new in [("-", "--"), (" ", "-"), ("_", "__"), ("?", "~q"),
-                         ("%", "~p"), ("#", "~h"), ("/", "~s"), ("\"", "''")]:
+        for old, new in [
+            ("-", "--"),
+            (" ", "-"),
+            ("_", "__"),
+            ("?", "~q"),
+            ("%", "~p"),
+            ("#", "~h"),
+            ("/", "~s"),
+            ('"', "''"),
+        ]:
             s = s.replace(old, new)
         return s
+
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
 
@@ -38,25 +48,22 @@ def login_required(f):
 def lookup(symbol):
     """Look up quote for symbol."""
 
-    # Contact API
+    """Look up quote for symbol."""
+    url = f"https://finance.cs50.io/quote?symbol={symbol.upper()}"
     try:
-        api_key = os.environ.get("API_KEY")
-        url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={api_key}"
         response = requests.get(url)
-        response.raise_for_status()
-    except requests.RequestException:
-        return None
-
-    # Parse response
-    try:
-        quote = response.json()
+        response.raise_for_status()  # Raise an error for HTTP error responses
+        quote_data = response.json()
         return {
-            "name": quote["companyName"],
-            "price": float(quote["latestPrice"]),
-            "symbol": quote["symbol"]
+            "name": quote_data["companyName"],
+            "price": quote_data["latestPrice"],
+            "symbol": symbol.upper()
         }
-    except (KeyError, TypeError, ValueError):
-        return None
+    except requests.RequestException as e:
+        print(f"Request error: {e}")
+    except (KeyError, ValueError) as e:
+        print(f"Data parsing error: {e}")
+    return None
 
 
 def usd(value):
