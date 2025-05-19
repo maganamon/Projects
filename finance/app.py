@@ -14,7 +14,6 @@ app = Flask(__name__)
 
 #Load API Automatically when ran
 from dotenv import load_dotenv
-
 load_dotenv()
 
 # Custom filter
